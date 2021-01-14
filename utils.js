@@ -1,34 +1,36 @@
-import { getRandomThrow } from './get-random-throw.js';
+
 
 export function didUserWin(player, computer) {
     if (player === computer) {
-        return 'draw';
+        return 'Draw';
     }
 
     //Paper & Rock
-    if (getRandomThrow(player === 'Paper' && computer === 'Rock')) {
+    if (player === 'Paper' && computer === 'Rock') {
         return 'You won!';
     }
 
-    if (getRandomThrow(player === 'Rock' && computer === 'Paper')) {
-        return 'You lose.';
+    if (player === 'Rock' && computer === 'Paper') {
+        return 'You lost.';
     }
 
     //Paper & Scissors
-    if (getRandomThrow(player === 'Paper' && computer === 'Scissors')) {
-        return 'You lose.';
+    if (player === 'Paper' && computer === 'Scissors') {
+        return 'You lost.';
     }
 
-    if (getRandomThrow(player === 'Scissors' && computer === 'Paper')) {
+    if (player === 'Scissors' && computer === 'Paper') {
+
         return 'You won!';
     }
 
     //Scissors & Rock
-    if (getRandomThrow(player === 'Scissors' && computer === 'Rock')) {
-        return 'You lose';
+    if (player === 'Scissors' && computer === 'Rock') {
+        return 'You lost';
     }
 
-    if (getRandomThrow(player === 'Rock' && computer === 'Scissors')) {
+    if (player === 'Rock' && computer === 'Scissors') {
+
         return 'You won!';
     }
 }
