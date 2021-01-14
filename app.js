@@ -28,32 +28,35 @@ submitButton.addEventListener('click', () => {
 
     const userGuess = checkedInput.value;
 
-    messageContent(userGuess, computerPick);
+    const messageOutput = didUserWin(userGuess, computerPick);
+
+    messageContent(messageOutput);
     
     //Computer pick span
     compPickSpan.textContent = computerPick;
     
     //Wins, total, and losses span
-    winSpan.textContent = wins;
-    lossSpan.textContent = total - wins - draw;
     totalSpan.textContent = total;
-    drawSpan.textContent = draw;
     
 });
 
-function messageContent(userGuess, computerPick) {
+function messageContent(messageOutput) {
 
-    if (didUserWin(userGuess, computerPick) === 'lose') {
+    
+    if (messageOutput === 'lose'); {
         resultMessage.textContent = 'You lost, womp womp;';
+        lossSpan.textContent = total - wins - draw;
     }
-
-    if (didUserWin(userGuess, computerPick) === 'won') {
+    
+    if (messageOutput === 'won') {
         ++wins;
         resultMessage.textContent = 'You won, congrats!';
+        winSpan.textContent = wins;
     }
-
-    if (didUserWin(userGuess, computerPick) === 'draw') {
+    
+    if (messageOutput === 'draw') {
         ++draw;
         resultMessage.textContent = "It's a draw, try again.";
+        drawSpan.textContent = draw;
     }
 }
