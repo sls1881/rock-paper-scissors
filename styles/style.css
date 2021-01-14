@@ -2,7 +2,7 @@
 body, button {
     --color1: hsla(96, 20%, 5%, 1);
     --color2: hsla(339, 100%, 56%, 1);
-    --color3: hsla(61, 100%, 54%, 1);
+    --color3: rgb(223, 207, 58);
     --color4: hsla(172, 80%, 59%, 1);
     --color5: hsla(0, 0%, 100%, 1);
     
@@ -14,6 +14,10 @@ body, button {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 main {
@@ -47,6 +51,10 @@ header {
     box-shadow: var(--shadow);
 }
 
+p {
+    padding: 20px;
+}
+
 footer {
     display: flex;
     justify-content: flex-end;
@@ -61,6 +69,11 @@ button {
 
 .button {
     padding: 20px;
+}
+
+.message{
+    font-weight: bolder;
+    font-size: 2rem;
 }
 
 .gutter-right {
