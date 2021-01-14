@@ -1,4 +1,5 @@
 import { getRandomThrow } from '../get-random-throw.js';
+import { didUserWin } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -41,5 +42,23 @@ test('It should return scissors when provided a three', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('It should return return draw when provided 1', (expect) => {
+
+    const expected = 'draw';
+
+    const actual = didUserWin(1, 1);
+
+    expect.equal(actual, expected);
+});
+
+test('It should return return win when provided 1, 3', (expect) => {
+
+    const expected = 'won';
+
+    const actual = didUserWin(1, 3);
+
     expect.equal(actual, expected);
 });
