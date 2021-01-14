@@ -1,9 +1,10 @@
-// export function didUserWin(player, computer) {
-//     if (paper === paper) {
-//         resultMessage.textContent = "It's a draw";
-//     } else if (rock )
-// }
 
-export function getRandomThrow() {
-    if (pa)
+export function getRandomThrow(rps) {
+    if (rps === 1) {
+        return 'Rock';
+    } else if (rps === 2) {
+        return 'Paper';
+    } else if (rps === 3) {
+        return 'Scissors';
+    }
 }

@@ -1,11 +1,11 @@
-// import functions and grab DOM elements
+import { didUserWin } from './utils.js';
+
 const submitButton = document.getElementById('submit');
-const CompPickSpan = document.getElementById('comp-pick-span');
+const compPickSpan = document.getElementById('comp-pick-span');
 const winSpan = document.getElementById('win-span');
 const lossSpan = document.getElementById('loss-span');
 const totalSpan = document.getElementById('total-span');
 const resultMessage = document.getElementById('result-message');
-const checkInput = document.querySelector('input[type = "Radio"]:checked');
 
 // initialize state
 let wins = 0;
@@ -16,16 +16,23 @@ submitButton.addEventListener('click', () => {
 
     total++;
 
-    cons computerPick = (Math.ceil(Math.random() * 3));
+    const randomPick = Math.ceil(Math.random() * 3);
 
-    resultMessage.textContent = `You ${}.`;
+    const compAnswer = didUserWin(randomPick);
 
-    if (computerPick === 1) {
-        wins++;
+    //Store user input
+    const checkedInput = document.querySelector('input[type="radio"]:checked');
 
-    }
-    cons userPick = 
+    const userGuess = checkedInput.value;
 
-    didUserWin(checkInput.value);
+    //Computer pick span
+    compPickSpan.textContent = compAnswer;
+
+    //Wins, total, and losses span
+    winSpan.textContent = wins;
+    lossSpan.textContent = total - wins;
+    totalSpan.textContent = total;
 
 });
+
+// didUserWin(userGuess, compAnswer);
