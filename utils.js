@@ -1,5 +1,3 @@
-
-
 export function didUserWin(player, computer) {
     if (player === computer) return 'draw';
 

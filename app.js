@@ -28,7 +28,20 @@ submitButton.addEventListener('click', () => {
 
     const userGuess = checkedInput.value;
 
-    // const results = didUserWin(userGuess, computerPick);
+    messageContent(userGuess, computerPick);
+    
+    //Computer pick span
+    compPickSpan.textContent = computerPick;
+    
+    //Wins, total, and losses span
+    winSpan.textContent = wins;
+    lossSpan.textContent = total - wins - draw;
+    totalSpan.textContent = total;
+    drawSpan.textContent = draw;
+    
+});
+
+function messageContent(userGuess, computerPick) {
 
     if (didUserWin(userGuess, computerPick) === 'lose') {
         resultMessage.textContent = 'You lost, womp womp;';
@@ -43,14 +56,4 @@ submitButton.addEventListener('click', () => {
         ++draw;
         resultMessage.textContent = "It's a draw, try again.";
     }
-
-    //Computer pick span
-    compPickSpan.textContent = computerPick;
-
-    //Wins, total, and losses span
-    winSpan.textContent = wins;
-    lossSpan.textContent = total - wins - draw;
-    totalSpan.textContent = total;
-    drawSpan.textContent = draw;
-
-});
+}
