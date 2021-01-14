@@ -15,33 +15,37 @@
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
+            <img src="assets/big-logo.png" />
         </div>
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <content>
+            <h1>Welcome to the Rock, Paper, Scissors Game</h1>
+            <img src='assets/rps.png' alt='A rock, piece of paper, and pair of scissors' />
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
+                Select a choice below to see if you can beat the computer.
             </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-
+            <label>
+                Rock
+                <input type='radio' name='rps' value='Rock' />
+            </label>
+            <label>
+                Paper
+                <input type='radio' name='rps' value='Paper' />
+            </label>
+            <label>
+                Scissors
+                <input type='radio' name='rps' value='Scissors' />
+            </label>
+            <div class='button'>
+                <button id='submit'>I'm feeling lucky</button>
+            </div>
+            <div>Computers pick: <span id="comp-pick-span"></span></div>
+            <div>Wins: <span id="win-span"></span></div>
+            <div>Losses: <span id="loss-span"></span></div>
+            <div>Draws: <span id="draw-span"></span></div>
+            <div>Total: <span id="total-span"></span></div>
+            <div id="result-message" class='message'></div>
         </section>
     </main>
     <footer>
