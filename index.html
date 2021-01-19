@@ -21,7 +21,9 @@
     <main>
         <section class="main-section">
             <h1>Welcome to the Rock, Paper, Scissors Game</h1>
-            <img src='assets/rps.png' alt='A rock, piece of paper, and pair of scissors' />
+            <div>
+                <img class='rps-img' src='assets/rps.png' alt='A rock, piece of paper, and pair of scissors' />
+            </div>
             <p>
                 Select a choice below to see if you can beat the computer.
             </p>
@@ -40,11 +42,15 @@
             <div class='button'>
                 <button id='submit'>I'm feeling lucky</button>
             </div>
+            <span id="button-count"></span>
+            <br />
+            <button id="reset-button">Play again</button>
+            <br />
             <div>Computers pick: <span id="comp-pick-span"></span></div>
             <div>Wins: <span id="win-span"></span></div>
             <div>Losses: <span id="loss-span"></span></div>
-            <div>Total: <span id="total-span"></span></div>
             <div>Draws: <span id="draw-span"></span></div>
+            <div>Total: <span id="total-span"></span></div>
             <div id="result-message" class='message'></div>
         </section>
     </main>

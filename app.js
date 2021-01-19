@@ -8,14 +8,19 @@ const lossSpan = document.getElementById('loss-span');
 const totalSpan = document.getElementById('total-span');
 const drawSpan = document.getElementById('draw-span');
 const resultMessage = document.getElementById('result-message');
+const resetButton = document.getElementById('reset-button');
+const buttonCount = document.getElementById('button-count');
 
 // initialize state
 let wins = 0;
 let total = 0;
 let draw = 0;
 
+let count = 1;
 // set event listeners to update state and DOM
 submitButton.addEventListener('click', () => {
+
+    buttonCount.textContent = count++;
 
     total++;
 
@@ -54,3 +59,16 @@ submitButton.addEventListener('click', () => {
     drawSpan.textContent = draw;
 
 });
+
+resetButton.addEventListener('click', () => {
+
+    winSpan.textContent = '';
+    lossSpan.textContent = '';
+    totalSpan.textContent = '';
+    drawSpan.textContent = '';
+    compPickSpan.textContent = '';
+    resultMessage.textContent = '';
+    buttonCount.textContent = '';
+
+});
+
